@@ -4,7 +4,7 @@
 电脑装本插件，扫码即可在手机上收发会话、下发任务、接收文件。
 
 - 插件名：`dsh-dsbot-host`
-- 版本：`0.3.3`
+- 版本：`0.3.4`
 - 平台：Windows + DSH 桌面版
 
 ## 它做了什么
@@ -29,7 +29,7 @@ dsh-dsbot-host
 在 DSH「插件」页安装，填下面这个地址（DSH 支持远程 tarball）：
 
 ```
-https://github.com/zhangzhimiao1994/dsh-jingshu/releases/latest/download/dsh-dsbot-host-0.3.3.tgz
+https://github.com/zhangzhimiao1994/dsh-jingshu-/raw/main/dsh-dsbot-host-0.3.4.tgz
 ```
 
 或下载该 tgz 后填本地路径。
