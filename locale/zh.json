@@ -1,6 +1,7 @@
 {
   "meta": {
     "title": "鲸枢电脑端连接",
-    "description": "让手机通过鲸枢 App 连接这台电脑上的 DSH：一次装好电脑端桥接（中继/凭据/反向调用/outbox），并提供本机配对状态接口。\n\n看登录码：登录码不在这里显示，它由桥接写入 %USERPROFILE%\\.dsbot\\pair.json，10 分钟过期后桥接自动换新。三种方式任选其一——\n1) 运行 tools\\dsbot-pair.ps1（加 -Open 同时打开二维码页面）；\n2) 直接用浏览器打开 %USERPROFILE%\\.dsbot\\pair.html（每 30 秒自动刷新，含二维码）；\n3) 浏览器访问本机插件接口 http://127.0.0.1:<DSH端口>/dsbot-host/pair（需 DSH 会话）。\n\n掉线恢复：桥接靠计划任务 DSBotBridge 常驻。桥接停了就运行 schtasks /run /tn DSBotBridge，或 tools\\dsbot-pair.ps1 -Restart，再取码。"
-  }
+    "description": "让手机通过鲸枢 App 连接这台电脑上的 DSH：一次装好电脑端桥接（中继/凭据/反向调用/outbox），并提供本机配对状态接口。\n\n看登录码：登录码不在这里显示，它由桥接写入 %USERPROFILE%\\.dsbot\\pair.json，10 分钟过期后桥接自动换新。三种方式任选其一——\n1) 运行 tools\\jingshu-pair.ps1（加 -Open 同时打开二维码页面）；\n2) 直接用浏览器打开 %USERPROFILE%\\.dsbot\\pair.html（每 30 秒自动刷新，含二维码）；\n3) 浏览器访问本机插件接口 http://127.0.0.1:<DSH端口>/jingshu-host/pair（需 DSH 会话）。\n\n掉线恢复：桥接靠计划任务 DSBotBridge 常驻。桥接停了就运行 schtasks /run /tn DSBotBridge，或 tools\\jingshu-pair.ps1 -Restart，再取码。"
+  },
+  "description": "让手机通过鲸枢 App 连接这台电脑上的 DSH：插件会自动装好并守护电脑端桥接（中继/凭据/反向调用/outbox）。\n\n看登录码：打开侧边栏「更多」→「鲸枢配对」，面板里有二维码和 6 位登录码；登录码一次性、10 分钟有效，过期面板自动换新。\n\n掉线恢复：重启 DSH 即可，插件会自己把桥接拉起来，不需要跑任何脚本。"
 }

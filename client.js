@@ -1,5 +1,5 @@
 /**
- * dsh-dsbot-host —— 客户端半。
+ * dsh-jingshu —— 客户端半。
  *
  * 提供两个入口：
  *   1. 侧边栏「更多」列表里一个「鲸枢配对」项（slot: sidebar.panellist）
@@ -7,17 +7,17 @@
  *   2. 设置 → 通用 里一行同样的状态面板（slot: settings.general.item）
  *
  * 数据来自同机接口，不新增对外暴露面：
- *   GET /dsbot-host/pair    状态 + 登录码 + 可执行提示（需 DSH 会话）
- *   GET /dsbot-host/qr.svg  当前登录码的二维码
+ *   GET /jingshu-host/pair    状态 + 登录码 + 可执行提示（需 DSH 会话）
+ *   GET /jingshu-host/qr.svg  当前登录码的二维码
  */
 window.__ModuleLoader__.load({
-  id: 'dsh-dsbot-host',
+  id: 'dsh-jingshu',
   factory(require) {
     const React = require('react')
     const h = React.createElement
     const { useState, useEffect, useCallback } = React
 
-    const PANEL_ID = 'dsbot-pair'
+    const PANEL_ID = 'jingshu-pair'
     const PANEL_LABEL = '鲸枢配对'
     const REFRESH_MS = 20000
 
@@ -82,7 +82,7 @@ window.__ModuleLoader__.load({
 
       const load = useCallback(async () => {
         try {
-          const res = await fetch('/dsbot-host/pair', { credentials: 'same-origin' })
+          const res = await fetch('/jingshu-host/pair', { credentials: 'same-origin' })
           if (!res.ok) throw new Error('HTTP ' + res.status)
           const data = await res.json()
           setState({ loading: false, data, error: null })
@@ -155,7 +155,7 @@ window.__ModuleLoader__.load({
             hasCode
               ? h('img', {
                   style: styles.qr,
-                  src: '/dsbot-host/qr.svg' + version,
+                  src: '/jingshu-host/qr.svg' + version,
                   alt: '登录码 ' + data.code + ' 的二维码',
                 })
               : h(
@@ -200,7 +200,7 @@ window.__ModuleLoader__.load({
               ),
             ),
             h('div', { style: styles.row }, '二维码页：%USERPROFILE%\\.dsbot\\pair.html（30 秒自动刷新）'),
-            h('div', { style: styles.row }, '桥接停了：运行 schtasks /run /tn DSBotBridge 即可恢复并换新码'),
+            h('div', { style: styles.row }, '桥接停了：重启 DSH 即可恢复并换新码'),
           ),
         ),
       )
@@ -248,7 +248,7 @@ window.__ModuleLoader__.load({
         try {
           ctx.slots.inject('settings.general.item', () =>
             ctx.slots.register(
-              { name: 'settings.general.item', id: 'dsbot-pair-settings', order: 60 },
+              { name: 'settings.general.item', id: 'jingshu-pair-settings', order: 60 },
               PairCard,
             ),
           )

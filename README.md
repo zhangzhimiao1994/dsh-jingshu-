@@ -19,7 +19,7 @@
 在 DSH「插件」页安装，填：
 
 ```
-dsh-dsbot-host
+dsh-jingshu
 ```
 
 装完重启 DSH，侧边栏出现「鲸枢配对」即成功。
@@ -52,7 +52,7 @@ https://github.com/zhangzhimiao1994/dsh-jingshu-/raw/main/dsh-jingshu-0.0.1.tgz
 
 ```
 client.js            侧边栏/设置页 UI（鲸枢配对面板）
-lib/index.js         插件入口与 /dsbot-host/* 接口
+lib/index.js         插件入口与 /jingshu-host/* 接口
 lib/installer.js     幂等安装：目录、桥接文件、host-keys、配置
 lib/supervisor.js    桥接进程守护（端口/锁探测 + 重试）
 lib/upstream.js      DSH 后端发现与切换
