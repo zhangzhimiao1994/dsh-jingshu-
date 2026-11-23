@@ -1,0 +1,47 @@
+{
+  "name": "dsh-dsbot-host",
+  "version": "0.3.3",
+  "description": "DeepSeek 远控台 手机连接宿主插件：一次性装好电脑端桥接（relay / 凭据 / 反向调用 / outbox），并在侧边栏「更多」与「设置 → 通用」里显示登录码和可扫二维码",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "lib",
+    "assets",
+    "locale",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhangzhimiao1994/dsh-jingshu.git"
+  },
+  "homepage": "https://github.com/zhangzhimiao1994/dsh-jingshu",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "whale",
+    "remote",
+    "bridge"
+  ]
+}

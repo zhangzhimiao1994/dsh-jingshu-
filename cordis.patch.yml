@@ -1,0 +1,5 @@
+# dsh-dsbot-host bundle patch layer.
+# 装进 profile 后，本文件会被拼进 profile 的组装结果，新增 dsbot-host 节点。
+- insert:
+    - id: dsbot-host
+      name: 'dsh-dsbot-host'
