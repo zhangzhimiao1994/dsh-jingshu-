@@ -1,9 +1,9 @@
-# dsh-jingshu 插件（鲸枢手机连接）
+# 鲸枢配对插件（dsh-jingshu）
 
 让 **DeepSeek Harness（DSH）** 具备“手机遥控电脑”的能力：手机装「DSH鲸枢控制台」，
 电脑装本插件，扫码即可在手机上收发会话、下发任务、接收文件。
 
-- 插件名：`dsh-dsbot-host`
+- 插件名：`dsh-jingshu`
 - 版本：`0.0.1`
 - 平台：Windows + DSH 桌面版
 
@@ -29,7 +29,7 @@ dsh-dsbot-host
 在 DSH「插件」页安装，填下面这个地址（DSH 支持远程 tarball）：
 
 ```
-https://github.com/zhangzhimiao1994/dsh-jingshu-/raw/main/dsh-dsbot-host-0.0.1.tgz
+https://github.com/zhangzhimiao1994/dsh-jingshu-/raw/main/dsh-jingshu-0.0.1.tgz
 ```
 
 或下载该 tgz 后填本地路径。
