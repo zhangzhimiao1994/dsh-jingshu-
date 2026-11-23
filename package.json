@@ -1,6 +1,6 @@
 {
   "name": "dsh-dsbot-host",
-  "version": "0.3.4",
+  "version": "0.0.1",
   "description": "DeepSeek 远控台 手机连接宿主插件：一次性装好电脑端桥接（relay / 凭据 / 反向调用 / outbox），并在侧边栏「更多」与「设置 → 通用」里显示登录码和可扫二维码",
   "type": "module",
   "main": "lib/index.js",
